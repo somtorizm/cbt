@@ -4,12 +4,17 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.List;
 
-public class SwipeStackAdapter extends BaseAdapter {
+public class SwipeStackAdapter extends PagerAdapter  {
     private List<String> mData;
     Context context;
 
@@ -19,28 +24,32 @@ public class SwipeStackAdapter extends BaseAdapter {
         this.context = context;
     }
 
+
     @Override
     public int getCount() {
         return mData.size();
     }
 
+    @NonNull
     @Override
-    public Object getItem(int i) {
-        return mData.get(i);
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return i;
-    }
-
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public Object instantiateItem(@NonNull ViewGroup container, int position) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        view = inflater.inflate(R.layout.slide,viewGroup,false);
-        TextView textViewCard = view.findViewById(R.id.textView);
-        textViewCard.setText(mData.get(i));
-
-        return view;
+       View view = inflater.inflate(R.layout.slide,container,false);
+        container.addView(view);
+        return  view;
     }
+
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        container.removeView((FrameLayout) object);
+    }
+
+    @Override
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
+        return (view == (FrameLayout) object);
+    }
+
+
+
+
 }

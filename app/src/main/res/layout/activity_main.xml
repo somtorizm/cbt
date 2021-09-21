@@ -3,16 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="@color/purple_700"
     android:layout_height="match_parent"
-    android:clipChildren="false">
+    >
 
-    <link.fls.swipestack.SwipeStack
-        android:id="@+id/swipeStack"
-        android:layout_margin="20dp"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="100dp"
+        android:background="@color/white"
         app:stack_rotation="0"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         />
 
 </FrameLayout>

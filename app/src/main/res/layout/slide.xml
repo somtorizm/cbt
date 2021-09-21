@@ -6,19 +6,89 @@
     android:layout_width="match_parent"
     app:cardCornerRadius="20dp"
     app:cardElevation="20dp"
-    app:cardBackgroundColor="@color/purple_700"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
     <RelativeLayout
         android:layout_width="match_parent"
+        android:padding="20dp"
         android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Select an answer"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="22sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Which of the following statement applies to all driving emergency situtations"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:background="@drawable/radio_btn_background"
+                android:layout_width="match_parent"
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:text="Think before you act and go to hell" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_marginTop="20dp"
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:background="@drawable/radio_btn_background"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Slow down gradually" />
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:background="@drawable/radio_btn_background"
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hot break" />
+
+            <RadioButton
+                android:id="@+id/radioButton5"
+                android:layout_marginTop="10dp"
+                android:padding="20dp"
+                android:textSize="18sp"
+                android:background="@drawable/radio_btn_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Close eyes" />
+        </RadioGroup>
+
+
+
+    </LinearLayout>
     </RelativeLayout>
+
 
 </androidx.cardview.widget.CardView>
