@@ -1,94 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="20dp"
     android:layout_height="wrap_content">
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:padding="20dp"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:orientation="vertical">
         <TextView
-            android:layout_width="wrap_content"
-            android:textSize="15sp"
-            android:padding="5dp"
-            android:layout_marginLeft="10dp"
-            android:textColor="@android:color/darker_gray"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content"
-            android:text="Select an answer"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:textSize="22sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:textSize="19sp"
+            android:id="@+id/question_txt_view"
 
-            android:textStyle="bold"
             android:layout_marginTop="10dp"
+            android:lineSpacingExtra="9dp"
             android:layout_height="wrap_content"
             android:text="Which of the following statement applies to all driving emergency situtations"/>
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_marginTop="15dp"
-            android:padding="10dp"
-            android:layout_height="wrap_content">
+
+      <RadioGroup
+          android:layout_width="match_parent"
+          android:layout_marginTop="10dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_height="wrap_content">
 
 
             <RadioButton
                 android:id="@+id/radioButton2"
-                android:background="@drawable/radio_btn_background"
-                android:layout_width="match_parent"
                 android:padding="20dp"
-                android:textSize="18sp"
-                android:layout_height="wrap_content"
-                android:text="Think before you act and go to hell" />
+                android:button="@drawable/checkselector"
 
-            <RadioButton
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/green"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:layout_height="wrap_content"
+                android:text="Think before you act and go to hell"
+                android:layout_gravity="center_horizontal" />
+
+
+          <View
+              android:id="@+id/divider"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="?android:attr/listDivider" />
+
+          <RadioButton
                 android:id="@+id/radioButton3"
+                android:button="@drawable/checkselector"
+
                 android:layout_marginTop="20dp"
                 android:padding="20dp"
-                android:textSize="18sp"
-                android:background="@drawable/radio_btn_background"
+                android:textSize="15sp"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Slow down gradually" />
-            <RadioButton
+                android:text="Slow down gradually"
+                android:layout_gravity="center_horizontal" />
+
+          <RadioButton
                 android:id="@+id/radioButton4"
                 android:padding="20dp"
-                android:textSize="18sp"
-                android:background="@drawable/radio_btn_background"
+                android:button="@drawable/checkselector"
+
+                android:textSize="15sp"
+                android:drawablePadding="10dp"
 
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hot break" />
+                android:text="Hot break"
+                android:layout_gravity="center_horizontal" />
 
+
+          <View
+              android:id="@+id/divider2"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="?android:attr/listDivider" />
             <RadioButton
                 android:id="@+id/radioButton5"
                 android:layout_marginTop="10dp"
                 android:padding="20dp"
-                android:textSize="18sp"
-                android:background="@drawable/radio_btn_background"
+                android:button="@drawable/checkselector"
+                android:textSize="15sp"
+                android:drawablePadding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Close eyes" />
-        </RadioGroup>
+                android:text="Close eyes"
+                android:layout_gravity="center_horizontal" />
+
+          <View
+              android:id="@+id/divider1"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="?android:attr/listDivider" />
+      </RadioGroup>
 
 
 
     </LinearLayout>
-    </RelativeLayout>
+    </ScrollView>
 
 
-</androidx.cardview.widget.CardView>
+
+</LinearLayout>

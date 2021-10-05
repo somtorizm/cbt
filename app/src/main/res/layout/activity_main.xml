@@ -1,22 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@color/purple_700"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="100dp"
-        android:background="@color/white"
-        app:stack_rotation="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:progress="10"
+            android:id="@+id/progress_bar"
+            android:layout_marginBottom="10dp"
+            style="?android:attr/progressBarStyleHorizontal"
+
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/question_no"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/green"
+
+                android:text="Question: 8/10"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selected_radio_btn"
+                android:drawablePadding="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingRight="10dp"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/ic_baseline_fiber_smart_record_24"
+                android:layout_marginLeft="20dp"
+                android:text="07:00"
+
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="9"
+                android:layout_marginRight="15sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="150dp"
+                    android:id="@+id/previous_btn"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="#FFFF"
+                    android:textColor="#070000"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Previous"/>
+                <Button
+                    android:layout_width="150dp"
+                    android:id="@+id/next_button"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#069C1D"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Next"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
 
 </FrameLayout>
